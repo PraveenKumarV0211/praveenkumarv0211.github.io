@@ -71,11 +71,7 @@ export default function Portfolio() {
       <section id="profile" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-            <img
-              src="./image.JPG"
-              alt="Praveen Kumar"
-              className="w-full h-full object-cover"
-            />
+          <img src={`${import.meta.env.BASE_URL}image.JPG`} />
           </div>
           <div className="text-center md:text-left">
             <p className={`${colors.textMuted} text-lg mb-2`}>Hello, I'm</p>
@@ -154,7 +150,7 @@ export default function Portfolio() {
                 role: 'Software Developer Intern',
                 period: 'May 2024 - Aug 2024',
                 location: 'Boston, MA',
-                logo: './ptc.png',
+                logo: `${import.meta.env.BASE_URL}ptc.png`,
                 bullets: [
                   'Developed real-time collaboration features for Onshape CAD platform using TypeScript and Angular',
                   'Built RESTful microservices with Java Spring Boot to handle document versioning and user sessions',
@@ -168,7 +164,7 @@ export default function Portfolio() {
                 role: 'Associate Software Engineer',
                 period: 'Jul 2021 - Jul 2023',
                 location: 'Chennai, India',
-                logo: './toyota.png',
+                logo: `${import.meta.env.BASE_URL}toyota.png`,
                 bullets: [
                   'Designed and implemented scalable REST APIs serving 10K+ daily active users for connected mobility services',
                   'Built event-driven messaging architecture using Apache Kafka and RabbitMQ for real-time vehicle data processing',
