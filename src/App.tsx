@@ -71,7 +71,7 @@ export default function Portfolio() {
       <section id="profile" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-          <img src={`${import.meta.env.BASE_URL}image.JPG`} />
+          <img src={`${import.meta.env.BASE_URL}profile.HEIC`} />
           </div>
           <div className="text-center md:text-left">
             <p className={`${colors.textMuted} text-lg mb-2`}>Hello, I'm</p>
