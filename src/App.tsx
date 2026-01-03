@@ -151,11 +151,12 @@ export default function Portfolio() {
                 period: 'May 2024 - Aug 2024',
                 location: 'Boston, MA',
                 logo: `${import.meta.env.BASE_URL}ptc.png`,
+                workLink: 'https://forum.onshape.com/discussion/28271',
+                Note: 'Search for Not Revision Managedin that Website',
                 bullets: [
-                  'Developed real-time collaboration features for Onshape CAD platform using TypeScript and Angular',
-                  'Built RESTful microservices with Java Spring Boot to handle document versioning and user sessions',
-                  'Integrated MongoDB for efficient data storage and retrieval of CAD document metadata',
-                  'Improved frontend performance by optimizing component rendering, reducing load times by 30%',
+                  'Resolved 20+ customer complaints about slow CAD specification access by implementing TypeScript/Angular UI components with asynchronous data fetching using Angular Promises, achieving a 50% reduction in search time, and improving UX performance',
+                  'Led the implementation of a scalable file naming system handling 1000+ CAD parts using Java Spring Boot, creating REST APIs to fetch metadata from MongoDB and apply user-defined export naming rules, reducing post-export file management by 80%',
+                  'Wrote Playwright E2E and JUnit integration tests, ensuring business workflows remained stable across deployments',
                 ],
                 tech: ['TypeScript', 'Angular', 'Java', 'Spring Boot', 'MongoDB'],
               },
@@ -165,13 +166,17 @@ export default function Portfolio() {
                 period: 'Jul 2021 - Jul 2023',
                 location: 'Chennai, India',
                 logo: `${import.meta.env.BASE_URL}toyota.png`,
+                Note: null,
+                workLink: null,
                 bullets: [
-                  'Designed and implemented scalable REST APIs serving 10K+ daily active users for connected mobility services',
-                  'Built event-driven messaging architecture using Apache Kafka and RabbitMQ for real-time vehicle data processing',
-                  'Developed monitoring dashboards with ReactJS and integrated Datadog for system observability',
-                  'Reduced system downtime by 40% through proactive monitoring and automated incident response',
+                  'Created a connected mobility platform to enable real-time vehicle telemetry processing by implementing 10+ REST APIs using Java Spring Boot, MongoDB, and asynchronous messaging with RabbitMQ, successfully handling 100k+ daily requests at 99.9% uptime.',
+                  'Eliminated monitoring blind spots in production systems by implementing Datadog APM with custom metrics, composite alerts, webhook notifications, and automated runbook triggers, reducing response time by 40% and preventing customer-facing outages',
+                  'Centralized scattered vehicle lifecycle data into an interactive ReactJS dashboard with real-time telemetry streaming, performance tracking, service analytics, and predictive analytics, enabling data-driven decisions for 20+ team stakeholders',
+                  'Collaborated with a cross-functional team to design and implement a hybrid messaging architecture using RabbitMQ to optimize microservices communication, consolidating services to reduce operational costs by $3,600/year',
+                  'Automated manual data cleanup processes by building cron-based schedulers with batch deletion algorithms and cascade operations for invalid telematics requests, cutting database size by 15% and saving $5K monthly in storage costs',
+                  'Led code quality initiative across 15+ repositories, achieving 85% test coverage with JUnit and Mockito, while eliminating 120+ critical vulnerabilities identified by SonarQube',
                 ],
-                tech: ['Java', 'REST APIs', 'Kafka', 'RabbitMQ', 'AWS', 'ReactJS', 'Datadog'],
+                tech: ['Java', 'Spring Boot', ' SonarQube','REST APIs', 'RabbitMQ', 'AWS', 'ReactJS', 'Datadog', 'JUnit', 'CI/CD', 'MongoDB'],
               },
             ].map((exp) => (
               <div key={exp.company} className={`p-6 rounded-2xl border ${colors.border} ${colors.bgAlt} flex flex-col md:flex-row`}>
@@ -184,13 +189,21 @@ export default function Portfolio() {
                   <p className="text-blue-600 font-medium">{exp.role}</p>
                   <p className={`text-sm ${colors.textMuted} mt-2`}>{exp.period}</p>
                   <p className={`text-sm ${colors.textMuted}`}>{exp.location}</p>
+                  {exp.workLink && (
+                    <a href={exp.workLink} target="_blank" rel="noopener noreferrer" className="mt-4 px-4 py-2 border border-blue-500 text-blue-500 rounded-full text-sm hover:bg-blue-500 hover:text-white transition-all">
+                      View My Work ↗
+                    </a>
+                  )}
+                  {exp.Note && (
+                    <p className={`text-sm ${colors.textMuted}`}> </p>
+                  )}
                 </div>
                 
                 
                 <div className="md:w-2/3 md:pl-6">
                   <ul className="space-y-2 mb-4">
                     {exp.bullets.map((bullet, i) => (
-                      <li key={i} className={`flex gap-2 ${colors.textMuted}`}>
+                      <li key={i} className={`flex gap-2 ${colors.textMuted} text-justify`}>
                         <span className="text-green-500 mt-1">•</span>
                         <span>{bullet}</span>
                       </li>
@@ -221,14 +234,12 @@ export default function Portfolio() {
                 desc: 'Real-time health tracking app with Dexcom API integration, built with React and Spring Boot.',
                 img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=250&fit=crop',
                 github: 'https://github.com/PraveenKumarV0211/Dexcom',
-                demo: 'https://glucose-monitor-demo.com',
               },
               {
                 title: 'Multi-Tier AWS Infrastructure Deployment with Terraform',
                 desc: 'Automated AWS cloud infrastructure setup using Terraform (HCL). Implemented CI/CD pipelines with GitHub Actions and Shell scripting and eliminating manual configuration errors',
-                img: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop',
-                github: 'https://github.com/PraveenKumarV0211/tf-aws-infra-copy',
-                demo: 'https://algorithm-visualizer-demo.com',
+                img: `${import.meta.env.BASE_URL}cloudProject.jpg`,
+                github: 'https://github.com/PraveenKumarV0211/tf-aws-infra-copy'
               },
             ].map((project) => (
               <div key={project.title} className={`w-full md:w-80 rounded-2xl border ${colors.border} ${colors.bg} overflow-hidden shadow-sm hover:shadow-lg transition-shadow`}>
@@ -239,9 +250,6 @@ export default function Portfolio() {
                   <div className="flex gap-3">
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className={`px-4 py-2 border ${colors.border} rounded-full text-sm ${colors.btnHover} transition-all`}>
                       GitHub
-                    </a>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-gray-900 text-white rounded-full text-sm hover:bg-gray-700 transition-all">
-                      Live Demo
                     </a>
                   </div>
                 </div>
