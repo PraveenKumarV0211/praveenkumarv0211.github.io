@@ -78,7 +78,7 @@ export default function Portfolio() {
             <h1 className={`text-4xl md:text-5xl font-bold ${colors.text} mb-2`}>Praveen Kumar</h1>
             <p className={`text-xl md:text-2xl ${colors.textMuted} mb-6`}>Software Engineer</p>
             <div className="flex gap-4 justify-center md:justify-start mb-6">
-              <a href="./Praveen.pdf" className={`px-6 py-3 border-2 ${colors.border} rounded-full font-medium ${colors.btnHover} transition-all`}>
+              <a href={`${import.meta.env.BASE_URL}Praveen.pdf`} className={`px-6 py-3 border-2 ${colors.border} rounded-full font-medium ${colors.btnHover} transition-all`}>
                 Download CV
               </a>
               <button onClick={() => scrollToSection('contact')} className="px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-700 transition-all">
@@ -148,7 +148,7 @@ export default function Portfolio() {
               {
                 company: 'PTC Inc. (Onshape)',
                 role: 'Software Developer Intern',
-                period: 'May 2024 - Aug 2024',
+                period: 'June 2024 - Aug 2024',
                 location: 'Boston, MA',
                 logo: `${import.meta.env.BASE_URL}ptc.png`,
                 workLink: 'https://forum.onshape.com/discussion/28271',
@@ -163,7 +163,7 @@ export default function Portfolio() {
               {
                 company: 'Toyota Connected',
                 role: 'Associate Software Engineer',
-                period: 'Jul 2021 - Jul 2023',
+                period: 'Jul 2022 - Jul 2024',
                 location: 'Chennai, India',
                 logo: `${import.meta.env.BASE_URL}toyota.png`,
                 Note: null,
