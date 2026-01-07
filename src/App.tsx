@@ -71,7 +71,7 @@ export default function Portfolio() {
       <section id="profile" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-          <img src={`${import.meta.env.BASE_URL}praveen_profile.jpg`} />
+          <img src={`${import.meta.env.BASE_URL}profile.jpg`} />
           </div>
           <div className="text-center md:text-left">
             <p className={`${colors.textMuted} text-lg mb-2`}>Hello, I'm</p>
@@ -126,12 +126,13 @@ export default function Portfolio() {
                   <p className={`text-sm ${colors.textMuted}`}>Software Development</p>
                 </div>
               </div>
-              <p className={`${colors.textMuted} leading-relaxed`}>
-                I'm a passionate software engineer with experience in full-stack development. 
-                Currently pursuing my Master's at Northeastern University, I've worked at companies 
-                like PTC (Onshape) and Toyota Connected, building scalable systems and intuitive 
-                user experiences. I also serve as a Teaching Assistant, helping students master 
-                data structures and algorithms.
+              <p className={`${colors.textMuted} leading-relaxed text-justify`}>
+                Hi, I am Praveen Kumar, a Software Engineer pursuing my Master's in Computer Software Engineering at Northeastern University (graduating May 2026).
+                <br />
+                I have built production systems at PTC Inc. (Onshape) working with TypeScript, Angular, and Java Spring Boot, and at Toyota Connected developing REST APIs, microservices, and real-time monitoring solutions.<br />
+                I have picked up cloud concepts along the way and enjoy turning ideas into real projects.<br />
+                Currently, I'm a Teaching Assistant for the course, Program Structure and Algorithms, where I teach Java, data structures, and algorithm design.<br />
+                I am passionate about building performant, scalable applications, spanning full-stack web development and distributed systems.
               </p>
             </div>
           </div>
@@ -151,7 +152,7 @@ export default function Portfolio() {
                 period: 'June 2024 - Aug 2024',
                 location: 'Boston, MA',
                 logo: `${import.meta.env.BASE_URL}ptc.png`,
-                workLink: 'https://forum.onshape.com/discussion/28271',
+                workLink: 'https://forum.onshape.com/discussion/28271#:~:text=NOT%20REVISION%20MANAGED%20%2D%20PART%20STATUS',
                 Note: 'Search for Not Revision Managedin that Website',
                 bullets: [
                   'Resolved 20+ customer complaints about slow CAD specification access by implementing TypeScript/Angular UI components with asynchronous data fetching using Angular Promises, achieving a 50% reduction in search time, and improving UX performance',
